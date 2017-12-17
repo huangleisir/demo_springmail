@@ -23,6 +23,7 @@ import javax.mail.internet.MimeUtility;
 
 public class JavaMailTest1 {
 	public static void main(String[] args) throws MessagingException {
+		long t1 = System.currentTimeMillis();
 		Properties props = new Properties();
 		// 开启debug调试
 		props.setProperty("mail.debug", "true");
@@ -81,8 +82,9 @@ public class JavaMailTest1 {
 		// 连接邮件服务器
 		transport.connect("huangleisir@126.com", "13579HL");
 		// 发送邮件
-		transport.sendMessage(msg, new Address[] {new InternetAddress("869328841@qq.com")});
+		transport.sendMessage(msg, new Address[] {new InternetAddress("huangleisir@qq.com")});
 		// 关闭连接
 		transport.close();
+		System.out.println(String.format("发送邮件耗时：【%s】", (System.currentTimeMillis()-t1)/1000.0)+"秒钟");
 	}
 }
