@@ -20,7 +20,7 @@ public class MailSeanderService {
 	
 	
 	// 测试目标地址, 可从数据库等获取
-	String[] tos = {"ghyg525@qq.com", "ghyg527@qq.com"};
+	String[] tos = {"huangleisir@qq.com"};
 	
 	
 	/**
